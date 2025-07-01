@@ -1,5 +1,4 @@
 resource "spacelift_worker_pool" "k8s-core1" {
-  config = "ajfkld;sajkl;"
   name        = "Main worker"
   csr         = filebase64("workerpooltest.csr")
   description = "test"

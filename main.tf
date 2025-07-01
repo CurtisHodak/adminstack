@@ -5,7 +5,7 @@ resource "spacelift_worker_pool" "k8s-core1" {
 }
 
 resource "spacelift_context" "prod-k8s-ie" {
-  description = "Configuration details for the compute cluster in 🇮🇪"
+  description = "Config"
   name        = "newnameforcontext"
   space_id = "root"
 }

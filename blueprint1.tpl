@@ -1,4 +1,3 @@
-
 inputs:
   - id: stack_name
     name: Stack name

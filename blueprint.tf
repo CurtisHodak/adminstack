@@ -3,5 +3,5 @@ resource spacelift_blueprint "blueprint1" {
     space = "root"
     state = "PUBLISHED"
     description = "testing"
-    template = file("${path.module}/blueprint1.yml")
+    template = file("${path.module}/blueprint1.yaml")
 }

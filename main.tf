@@ -1,11 +1,15 @@
-resource "spacelift_worker_pool" "k8s-core1" {
-  name        = "Main worker"
-  csr         = filebase64("workerpooltest.csr")
-  description = "test"
+resource spacelift_blueprint "blueprint1" {
+    name = "blueprint1"
+    space = "root"
+    state = "PUBLISHED"
+    description = "testing"
+    template = file("${path.module}/blueprint1.yaml")
 }
 
-resource "spacelift_context" "prod-k8s-ie" {
-  description = "Config"
-  name        = "newnameforcontext"
-  space_id = "root"
+resource spacelift_stack "tofustack" {
+    name = "tofustack"
+    description = "A stack for testing"
+    terraform_version = "1.10.3"
+    repository = "resources"
+    branch = "main"
 }

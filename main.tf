@@ -9,6 +9,7 @@ resource spacelift_blueprint "blueprint1" {
 resource spacelift_stack "tofustack" {
     name = "tofustack"
     description = "A stack for testing"
+    tool = "OPEN_TOFU"
     terraform_version = "1.10.3"
     repository = "resources"
     branch = "main"

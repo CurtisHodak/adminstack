@@ -10,7 +10,7 @@ resource spacelift_stack "tofustack" {
     name = "tofustack"
     description = "A stack for testing"
     terraform_workflow_tool = "OPEN_TOFU"
-    terraform_version = "1.10.3"
+    terraform_version = "1.9.0"
     repository = "resources"
     branch = "main"
 }

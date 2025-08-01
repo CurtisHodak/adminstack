@@ -16,4 +16,6 @@ resource spacelift_stack "tofustack" {
 }
 
 resource spacelift_stack "adminstack" {
+    name = "Adminstack"
+    repository
 } 

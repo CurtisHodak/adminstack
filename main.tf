@@ -15,10 +15,5 @@ resource spacelift_stack "tofustack" {
     branch = "main"
 }
 
-# resource spacelift_stack "adminstack" {
-#   name = "Adminstack"
-#   space = "root"  
-#   terraform_workflow_tool = "OPEN_TOFU"
-#   terraform_version = "1.9.0"
-#   repository = "adminstack"
-# } 
+resource spacelift_stack "adminstack" {
+} 

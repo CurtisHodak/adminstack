@@ -25,5 +25,5 @@ resource spacelift_stack "adminstack" {
     repository = "adminstack"
     branch = "main"
     terraform_workflow_tool = "OPEN_TOFU"
-    terraform_version = "1.9.0"
+    terraform_version = "1.10.3"
 }

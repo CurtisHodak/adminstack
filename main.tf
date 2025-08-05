@@ -7,7 +7,7 @@ resource spacelift_blueprint "blueprint1" {
 }
 
 resource spacelift_stack "tofustack" {
-    name = "tofustack"
+    name = "tofustack1"
     description = "A stack for testing"
     terraform_workflow_tool = "OPEN_TOFU"
     terraform_version = "1.9.0"

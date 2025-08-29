@@ -36,9 +36,32 @@ resource "spacelift_space" "space_a" {
   inherit_entities = true          # optional, inherit resources from parent
 }
 
+resource "spacelift_stack" "admin_space_a" {
+  administrative          = true
+  name                    = "Admin: SpaceA"
+  repository              = "adminstack"
+  branch                  = "main"
+  project_root            = "SpaceA"     # folder in your repo
+  terraform_workflow_tool = "OPEN_TOFU"
+  terraform_version       = "1.10.5"
+  space_id                = spacelift_space.space_a.id
+}
+
+
 resource "spacelift_space" "space_b" {
   name             = "SpaceB"
   parent_space_id  = "root"
   description      = "App team B"
   inherit_entities = true
+}
+
+resource "spacelift_stack" "admin_space_b" {
+  administrative          = true
+  name                    = "Admin: SpaceB"
+  repository              = "adminstack"
+  branch                  = "main"
+  project_root            = "SpaceB"     # folder in your repo
+  terraform_workflow_tool = "OPEN_TOFU"
+  terraform_version       = "1.10.5"
+  space_id                = spacelift_space.space_b.id
 }

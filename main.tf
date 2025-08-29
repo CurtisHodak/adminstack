@@ -27,3 +27,18 @@ resource spacelift_stack "adminstack" {
     terraform_workflow_tool = "OPEN_TOFU"
     terraform_version = "1.10.3"
 }
+
+
+resource "spacelift_space" "space_a" {
+  name             = "SpaceA"
+  parent_space_id  = "root"        # make it a child of root
+  description      = "App team A"
+  inherit_entities = true          # optional, inherit resources from parent
+}
+
+resource "spacelift_space" "space_b" {
+  name             = "SpaceB"
+  parent_space_id  = "root"
+  description      = "App team B"
+  inherit_entities = true
+}

@@ -68,8 +68,14 @@ resource "spacelift_stack" "admin_space_b" {
 
 resource "spacelift_module" "s3testmodule3" {
   name               = "s3testmodule3"
-  terraform_provider = "aws"
   branch             = "main"
   description        = "Infra terraform module"
   repository         = "s3testmodule"
+}
+
+resource "spacelift_aws_integration_attachment" "module_rw" {
+  integration_id = "01JT3NCFCXENF9A2J3EV5C2KS6"
+  module_id      = spacelift_module.s3test.id
+  read           = true
+  write          = true
 }

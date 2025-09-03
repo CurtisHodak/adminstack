@@ -71,5 +71,5 @@ resource "spacelift_module" "s3testmodule3" {
   terraform_provider = "aws"
   branch             = "main"
   description        = "Infra terraform module"
-  repository         = "CurtisHodak/s3testmodule"
+  repository         = "s3testmodule"
 }

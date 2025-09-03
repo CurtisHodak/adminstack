@@ -75,7 +75,7 @@ resource "spacelift_module" "s3testmodule3" {
 
 resource "spacelift_aws_integration_attachment" "module_rw" {
   integration_id = "01JT3NCFCXENF9A2J3EV5C2KS6"
-  module_id      = spacelift_module.s3test.id
+  module_id      = spacelift_module.s3testmodule3.id
   read           = true
   write          = true
 }

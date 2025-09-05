@@ -79,3 +79,9 @@ resource "spacelift_aws_integration_attachment" "module_rw" {
   read           = true
   write          = true
 }
+
+resource "spacelift_role" "readonly" {
+  name        = "ReadOnly Role"
+  description = "A role that can read Space resources and confirm runs"
+  actions     = ["SPACE_READ", "RUN_CONFIRM"]
+}

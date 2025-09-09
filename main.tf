@@ -89,7 +89,7 @@ resource "spacelift_role" "readonly" {
     "MODULE_ENABLE",
     "STACK_MANAGE",
     "MODULE_PUBLISH",
-    "RUN_TRiGGER",
+    "RUN_TRIGGER",
     "RUN_TRIGGER_WITH_CUSTOM_RUNTIME_CONFIG",
     "RUN_CONFIRM",
     "RUN_DISCARD",

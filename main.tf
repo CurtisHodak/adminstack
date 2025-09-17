@@ -127,8 +127,8 @@ resource "spacelift_role" "readonly" {
   ]
 }
 
-resource "spacelift_stack" "tofustack4" {
-  name                    = "tofustack4"
+resource "spacelift_stack" "tofustack5" {
+  name                    = "tofustack5"
   description             = "A stack for testing"
   terraform_workflow_tool = "OPEN_TOFU"
   terraform_version       = "1.9.0"

@@ -135,3 +135,12 @@ resource "spacelift_stack" "tofustacktwo" {
   repository              = "resources"
   branch                  = "main"
 }
+
+resource "spacelift_stack" "tofustackthree" {
+  name                    = "tofustack3"
+  description             = "A stack for testing"
+  terraform_workflow_tool = "OPEN_TOFU"
+  terraform_version       = "1.9.0"
+  repository              = "resources"
+  branch                  = "main"
+}

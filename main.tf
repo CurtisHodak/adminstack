@@ -127,11 +127,3 @@ resource "spacelift_role" "readonly" {
   ]
 }
 
-resource "spacelift_stack" "tofustack7" {
-  name                    = "tofustack7"
-  description             = "A stack for testing"
-  terraform_workflow_tool = "OPEN_TOFU"
-  terraform_version       = "1.9.0"
-  repository              = "resources"
-  branch                  = "main"
-}

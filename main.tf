@@ -119,10 +119,6 @@ resource "spacelift_role" "readonly" {
     "STACK_RESLUG",
     "STACK_MANAGED_STATE_ROLLBACK",
     "STACK_ENABLE",
-    "MODULE_DISABLE",
-    "MODULE_ENABLE",
-    "MODULE_PUBLISH",
-    "MODULE_CREATE",
     "STACK_MANAGE"
   ]
 }

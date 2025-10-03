@@ -34,7 +34,7 @@ resource "spacelift_environment_variable" "blank_var" {
   name        = "TF_VAR_blank"
   value       = ""
   write_only  = false
-  description = "Kubeconfig for the core stack"
+  description = ""
 }
 
 # resource "spacelift_space" "space_a" {

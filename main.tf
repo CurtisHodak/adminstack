@@ -29,6 +29,14 @@ resource "spacelift_stack" "adminstack" {
 }
 
 
+resource "spacelift_environment_variable" "blank_var" {
+  stack_id    = spacelift_stack.adminstack.id
+  name        = "TF_VAR_blank"
+  value       = ""
+  write_only  = false
+  description = "Kubeconfig for the core stack"
+}
+
 # resource "spacelift_space" "space_a" {
 #   name             = "SpaceA"
 #   parent_space_id  = "root" # make it a child of root

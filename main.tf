@@ -35,7 +35,12 @@ resource "spacelift_environment_variable" "blank_var" {
   value       = ""
   write_only  = false
   description = ""
+
+  lifecycle {
+    ignore_changes = [value]
+  }
 }
+
 
 # resource "spacelift_space" "space_a" {
 #   name             = "SpaceA"

@@ -44,7 +44,7 @@ resource "spacelift_environment_variable" "blank_var" {
 resource "spacelift_environment_variable" "new_var" {
   stack_id    = spacelift_stack.adminstack.id
   name        = "TF_VAR_new"
-  value       = ""
+  value       = "testing"
   write_only  = false
   description = "some value blah"
 }

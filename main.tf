@@ -123,10 +123,13 @@ resource "spacelift_stack" "adminstack" {
 #   ]
 # }
 
-resource "spacelift_api_key" "test1" { 
-  name        = "Test API Key 1"
-} 
+resource "spacelift_space" "development" {
+  name = "development"
 
-resource "spacelift_api_key" "test2" { 
-  name        = "Test API Key 1"
-} 
+  # Every account has a root space that serves as the root for the space tree.
+  # Except for the root space, all the other spaces must define their parents.
+  parent_space_id = "root"
+
+  # An optional description of a space.
+  description = "This a child of the root space. It contains all the resources common to the development infrastructure."
+}

@@ -29,27 +29,6 @@ resource "spacelift_stack" "adminstack" {
 }
 
 
-resource "spacelift_environment_variable" "blank_var" {
-  stack_id    = spacelift_stack.adminstack.id
-  name        = "TF_VAR_blank"
-  value       = ""
-  write_only  = false
-  description = ""
-
-  lifecycle {
-    ignore_changes = [value]
-  }
-}
-
-resource "spacelift_environment_variable" "new_var" {
-  stack_id    = spacelift_stack.adminstack.id
-  name        = "TF_VAR_new"
-  value       = "testing"
-  write_only  = false
-  description = "some value blah"
-}
-
-
 # resource "spacelift_space" "space_a" {
 #   name             = "SpaceA"
 #   parent_space_id  = "root" # make it a child of root
@@ -144,3 +123,6 @@ resource "spacelift_environment_variable" "new_var" {
 #   ]
 # }
 
+resource "spacelift_api_key" "test1" { 
+  name        = "Test API Key 1"
+} 

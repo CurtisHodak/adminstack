@@ -137,3 +137,14 @@ resource "spacelift_space" "development" {
   # An optional description of a space.
   description = "This a child of the root space. It contains all the resources common to the development infrastructure."
 }
+
+resource "spacelift_role" "testrole" {
+  name = "Test Role"
+  description = "Role for second user to assume and try"
+  actions = [
+  "SPACE_WRITE", 
+  "CONTEXT_CREATE",
+  "CONTEXT_DELETE",
+  "CONTEXT_UPDATE"
+  ]
+}

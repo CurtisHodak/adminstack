@@ -142,7 +142,7 @@ resource "spacelift_role" "testrole" {
   name = "Test Role"
   description = "Role for second user to assume and try"
   actions = [
-  "SPACE_READ", 
+  "SPACE_WRITE", 
   "CONTEXT_DELETE",
   "CONTEXT_UPDATE"
   ]

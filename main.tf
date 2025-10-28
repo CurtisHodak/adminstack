@@ -148,7 +148,7 @@ resource "spacelift_role" "testrole" {
   ]
 }
 
-resource "spacelift_stack" "adminstack" {
+resource "spacelift_stack" "slonboard" {
   administrative                   = false
   enable_sensitive_outputs_upload  = false
   enable_well_known_secret_masking = true

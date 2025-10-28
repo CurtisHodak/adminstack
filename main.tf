@@ -144,6 +144,7 @@ resource "spacelift_role" "testrole" {
   actions = [
   "SPACE_WRITE", 
   "CONTEXT_DELETE",
+  "Context_CREATE",
   "CONTEXT_UPDATE"
   ]
 }

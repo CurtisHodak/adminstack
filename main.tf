@@ -148,15 +148,3 @@ resource "spacelift_role" "testrole" {
   ]
 }
 
-resource "spacelift_stack" "slonboard" {
-  administrative                   = false
-  enable_sensitive_outputs_upload  = false
-  enable_well_known_secret_masking = true
-  github_action_deploy             = false
-  terraform_smart_sanitization     = true
-  name                             = "slonboard"
-  repository                       = "slonboard"
-  branch                           = "main"
-  terraform_workflow_tool          = "OPEN_TOFU"
-  terraform_version                = "1.10.6"
-}

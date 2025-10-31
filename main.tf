@@ -28,19 +28,6 @@ resource "spacelift_stack" "adminstack" {
   terraform_version                = "1.10.3"
 }
 
-resource "spacelift_stack" "adminstack2auto" {
-  administrative                   = true
-  enable_sensitive_outputs_upload  = false
-  enable_well_known_secret_masking = true
-  github_action_deploy             = false
-  terraform_smart_sanitization     = true
-  name                             = "Adminstack2autotrack"
-  repository                       = "adminstack"
-  branch                           = "main"
-  terraform_workflow_tool          = "OPEN_TOFU"
-  terraform_version                = "1.10.3"
-}
-
 
 # resource "spacelift_space" "space_a" {
 #   name             = "SpaceA"

@@ -147,7 +147,8 @@ resource "spacelift_role" "testrole" {
   "CONTEXT_CREATE",
   "CONTEXT_UPDATE"
   ]
-
+}
+ 
   resource "spacelift_role" "alice_role" {
   name = "Alice Role"
   description = "Role for second user to assume and try"

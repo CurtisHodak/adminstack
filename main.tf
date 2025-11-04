@@ -148,6 +148,15 @@ resource "spacelift_role" "testrole" {
   "CONTEXT_UPDATE"
   ]
 }
+ 
+  resource "spacelift_role" "alice_role" {
+  name = "Alice Role"
+  description = "Role for second user to assume and try"
+  actions = [
+  "SPACE_WRITE", 
+  "CONTEXT_UPDATE"
+  ]
+}
 
 resource "spacelift_space" "bills_space" {
   name = "bills_space"

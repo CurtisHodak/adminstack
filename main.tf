@@ -158,3 +158,20 @@ resource "spacelift_role" "testrole" {
   ]
 }
 
+resource "spacelift_space" "bills_space" {
+  name = "bills_space"
+
+  # Every account has a root space that serves as the root for the space tree.
+  # Except for the root space, all the other spaces must define their parents.
+  parent_space_id = "root"
+
+  # An optional description of a space.
+  description = "I'm Bill and I'm making a space."
+}
+
+data "spacelift_stacks" "all" {
+  # maybe add filters if supported, e.g. space_id = ...
+}
+output "stacks" {
+  value = data.spacelift_stacks.all.stacks
+}

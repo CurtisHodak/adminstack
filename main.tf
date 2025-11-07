@@ -169,11 +169,9 @@ resource "spacelift_space" "bills_space" {
   description = "I'm Bill and I'm making a space."
 }
 
-  resource "spacelift_role" "alice_role" {
-  name = "Alice Role"
-  description = "Role for second user to assume and try"
-  actions = [
-  "SPACE_WRITE" 
-  "CONTEXT_UPDATE"
-  ]
+data "spacelift_stacks" "all" {
+  # maybe add filters if supported, e.g. space_id = ...
+}
+output "stacks" {
+  value = data.spacelift_stacks.all.stacks
 }

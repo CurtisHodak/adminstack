@@ -123,9 +123,9 @@ resource "spacelift_stack" "adminstack" {
 #   ]
 # }
 
-resource "spacelift_api_key" "test1" { 
-  name        = "Test API Key 1"
-} 
+resource "spacelift_api_key" "test1" {
+  name = "Test API Key 1"
+}
 
 resource "spacelift_space" "development" {
   name = "development"
@@ -139,22 +139,22 @@ resource "spacelift_space" "development" {
 }
 
 resource "spacelift_role" "testrole" {
-  name = "Test Role"
+  name        = "Test Role"
   description = "Role for second user to assume and try"
   actions = [
-  "SPACE_ADMIN", 
-  "CONTEXT_DELETE",
-  "CONTEXT_CREATE",
-  "CONTEXT_UPDATE"
+    "SPACE_ADMIN",
+    "CONTEXT_DELETE",
+    "CONTEXT_CREATE",
+    "CONTEXT_UPDATE"
   ]
 }
- 
-  resource "spacelift_role" "alice_role" {
-  name = "Alice Role"
+
+resource "spacelift_role" "alice_role" {
+  name        = "Alice Role"
   description = "Role for second user to assume and try"
   actions = [
-  "SPACE_WRITE", 
-  "CONTEXT_UPDATE"
+    "SPACE_WRITE",
+    "CONTEXT_UPDATE"
   ]
 }
 
@@ -177,8 +177,8 @@ output "stacks" {
 }
 
 resource "spacelift_named_webhook" "my_webhook" {
-  name        = "My Named Webhook"
-  description = "A webhook for testing purposes"
+  name     = "My Named Webhook"
+  enabled  = true
   space_id = "root"
   endpoint = "https://test.com/webhook"
 }

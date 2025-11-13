@@ -182,4 +182,5 @@ resource "spacelift_named_webhook" "my_webhook" {
   space_id = "root"
   endpoint = "https://test.com/webhook"
   secret = "test"
+  retry_on_failure = true
 }

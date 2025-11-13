@@ -175,3 +175,10 @@ data "spacelift_stacks" "all" {
 output "stacks" {
   value = data.spacelift_stacks.all.stacks
 }
+
+resource "spacelift_named_webhook" "my_webhook" {
+  name        = "My Named Webhook"
+  description = "A webhook for testing purposes"
+  space_id = "root"
+  endpoint = "https://test.com/webhook"
+}

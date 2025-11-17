@@ -178,10 +178,9 @@ output "stacks" {
 }
 
 resource "spacelift_named_webhook" "my_webhook" {
-  name     = "My Named Webhook"
+  name     = "Test"
   enabled  = true
   space_id = "root"
-  endpoint = "https://test.com/webhook"
-  secret = "test"
-  retry_on_failure = true
+  endpoint = "https://webhook.site/eb9c9048-3d06-445f-a78f-8c0f7ad2144c"
+  retry_on_failure = false
 }

@@ -155,7 +155,8 @@ resource "spacelift_role" "alice_role" {
   actions = [
     "SPACE_WRITE",
     "CONTEXT_CREATE",
-    "CONTEXT_UPDATE"
+    "CONTEXT_UPDATE",
+    "CONTEXT_DELETE"
   ]
 }
 

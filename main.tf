@@ -145,6 +145,7 @@ resource "spacelift_role" "testrole" {
   actions = [
     "SPACE_ADMIN",
     "SPACE_WRITE",
+    "SPACE_READ",
     "CONTEXT_CREATE",
     "CONTEXT_UPDATE"
   ]

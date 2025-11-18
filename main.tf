@@ -144,7 +144,6 @@ resource "spacelift_role" "testrole" {
   description = "Role for second user to assume and try"
   actions = [
     "SPACE_ADMIN",
-    "CONTEXT_DELETE",
     "CONTEXT_CREATE",
     "CONTEXT_UPDATE"
   ]

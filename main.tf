@@ -144,8 +144,8 @@ resource "spacelift_role" "testrole" {
   description = "Role for second user to assume and try"
   actions = [
     "SPACE_ADMIN",
-    "CONTEXT_DELETE",
     "CONTEXT_CREATE",
+    "CONTEXT_DELETE",
     "CONTEXT_UPDATE"
   ]
 }
@@ -155,7 +155,9 @@ resource "spacelift_role" "alice_role" {
   description = "Role for second user to assume and try"
   actions = [
     "SPACE_WRITE",
-    "CONTEXT_UPDATE"
+    "CONTEXT_CREATE",
+    "CONTEXT_UPDATE",
+    "CONTEXT_DELETE"
   ]
 }
 
@@ -177,11 +179,10 @@ output "stacks" {
   value = data.spacelift_stacks.all.stacks
 }
 
-resource "spacelift_named_webhook" "my_webhook" {
-  name     = "Test"
-  enabled  = true
-  space_id = "root"
-  endpoint = "https://webhook.site/eb9c9048-3d06-445f-a78f-8c0f7ad2144c"
-  retry_on_failure = true
-  secret = "supersecret"
-}
+# resource "spacelift_named_webhook" "my_webhook" {
+#   name     = "Test"
+#   enabled  = true
+#   space_id = "root"
+#   endpoint = "https://webhook.site/eb9c9048-3d06-445f-a78f-8c0f7ad2144c"
+#   retry_on_failure = true
+# }

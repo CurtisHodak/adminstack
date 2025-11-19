@@ -189,7 +189,7 @@ output "stacks" {
 
 resource "spacelift_named_webhook" "ngrok3" {
   enabled     = true
-  name        = "ngrok2"
+  name        = "ngrok3"
   space_id    = "root"
   # These will be filled in after import
   endpoint = "https://hilaria-nonpelagic-devorah.ngrok-free.dev"

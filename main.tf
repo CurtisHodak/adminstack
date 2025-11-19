@@ -187,8 +187,7 @@ output "stacks" {
 #   retry_on_failure = true
 # }
 
-resource "spacelift_webhook" "ngrok2" {
-  name        = "ngrok2"
+resource "spacelift_webhook" "ngrok2" {s
   enabled     = true
 
   # These will be filled in after import

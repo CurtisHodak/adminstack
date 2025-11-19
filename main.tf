@@ -186,3 +186,19 @@ output "stacks" {
 #   endpoint = "https://webhook.site/eb9c9048-3d06-445f-a78f-8c0f7ad2144c"
 #   retry_on_failure = true
 # }
+
+resource "spacelift_webhook" "ngrok2" {
+  name        = "ngrok2"
+  description = "Imported from existing webhook"
+  enabled     = true
+  space_id    = "root"
+
+  # These will be filled in after import
+  endpoint = "https://hilaria-nonpelagic-devorah.ngrok-free.dev"
+
+}
+
+import {
+  to = spacelift_webhook.ngrok2
+  id = "ngrok2"
+}

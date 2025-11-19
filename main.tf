@@ -187,15 +187,16 @@ output "stacks" {
 #   retry_on_failure = true
 # }
 
-resource "spacelift_webhook" "ngrok2" {
+resource "spacelift_named_webhook" "ngrok2" {
   enabled     = true
-
+  name        = "ngrok2"
+  space_id    = "root"
   # These will be filled in after import
   endpoint = "https://hilaria-nonpelagic-devorah.ngrok-free.dev"
 
 }
 
 import {
-  to = spacelift_webhook.ngrok2
+  to = spacelift_named_webhook.ngrok2
   id = "ngrok2"
 }

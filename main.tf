@@ -146,6 +146,7 @@ resource "spacelift_role" "testrole" {
     "SPACE_ADMIN",
     "CONTEXT_CREATE",
     "CONTEXT_DELETE",
+    "CONTEXT_UPDATE"
   ]
 }
 

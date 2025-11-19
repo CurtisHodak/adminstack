@@ -26,6 +26,7 @@ resource "spacelift_stack" "adminstack" {
   branch                           = "main"
   terraform_workflow_tool          = "OPEN_TOFU"
   terraform_version                = "1.10.3"
+  worker_pool_id                   = "01K3219383K5H6AQEV7RVKXQQ3" # replace with your worker pool ID
 }
 
 

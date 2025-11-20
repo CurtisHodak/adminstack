@@ -124,42 +124,42 @@ resource "spacelift_stack" "adminstack" {
 #   ]
 # }
 
-resource "spacelift_api_key" "test1" {
-  name = "Test API Key 1"
-}
+# resource "spacelift_api_key" "test1" {
+#   name = "Test API Key 1"
+# }
 
-resource "spacelift_space" "development" {
-  name = "development"
+# resource "spacelift_space" "development" {
+#   name = "development"
 
-  # Every account has a root space that serves as the root for the space tree.
-  # Except for the root space, all the other spaces must define their parents.
-  parent_space_id = "root"
+#   # Every account has a root space that serves as the root for the space tree.
+#   # Except for the root space, all the other spaces must define their parents.
+#   parent_space_id = "root"
 
-  # An optional description of a space.
-  description = "This a child of the root space. It contains all the resources common to the development infrastructure."
-}
+#   # An optional description of a space.
+#   description = "This a child of the root space. It contains all the resources common to the development infrastructure."
+# }
 
-resource "spacelift_role" "testrole" {
-  name        = "Test Role"
-  description = "Role for second user to assume and try"
-  actions = [
-    "SPACE_ADMIN",
-    "CONTEXT_CREATE",
-    "CONTEXT_DELETE",
-    "CONTEXT_UPDATE"
-  ]
-}
+# resource "spacelift_role" "testrole" {
+#   name        = "Test Role"
+#   description = "Role for second user to assume and try"
+#   actions = [
+#     "SPACE_ADMIN",
+#     "CONTEXT_CREATE",
+#     "CONTEXT_DELETE",
+#     "CONTEXT_UPDATE"
+#   ]
+# }
 
-resource "spacelift_role" "alice_role" {
-  name        = "Alice Role"
-  description = "Role for second user to assume and try"
-  actions = [
-    "SPACE_WRITE",
-    "CONTEXT_CREATE",
-    "CONTEXT_UPDATE",
-    "CONTEXT_DELETE"
-  ]
-}
+# resource "spacelift_role" "alice_role" {
+#   name        = "Alice Role"
+#   description = "Role for second user to assume and try"
+#   actions = [
+#     "SPACE_WRITE",
+#     "CONTEXT_CREATE",
+#     "CONTEXT_UPDATE",
+#     "CONTEXT_DELETE"
+#   ]
+# }
 
 resource "spacelift_space" "bills_space" {
   name = "bills_space"

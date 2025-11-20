@@ -33,6 +33,7 @@ resource "spacelift_named_webhook" "test1" {
   # These will be filled in after import
   endpoint = "https://hilaria-nonpelagic-devorah.ngrok-free.dev"
   retry_on_failure = true
+  secret = "my-secret"
 }
 
 import {

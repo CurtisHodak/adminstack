@@ -31,7 +31,7 @@ resource "spacelift_named_webhook" "test1" {
   name        = "test1"
   space_id    = "root"
   # These will be filled in after import
-  endpoint = "https://hilaria-nonpelagic-devorah.ngrok-free.dev"
+  endpoint = "https://hilaria-nonpelagic-devorah.ngrok-free.dev2"
   retry_on_failure = true
   secret = nonsensitive(var.webhook_secret)
 }

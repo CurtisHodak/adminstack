@@ -1,5 +1,5 @@
-# data "spacelift_role_actions" "all" {}
+data "spacelift_role_actions" "all" {}
 
-# output "all_role_actions" {
-#   value = data.spacelift_role_actions.all.actions
-# }
+output "all_role_actions" {
+  value = data.spacelift_role_actions.all.actions
+}

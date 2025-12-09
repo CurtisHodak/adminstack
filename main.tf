@@ -26,17 +26,3 @@ resource "spacelift_space" "problemspace" {
 # }
 
 #
-resource "spacelift_named_webhook" "test1" {
-  enabled     = true
-  name        = "test1"
-  space_id    = "root"
-  # These will be filled in after import
-  endpoint = "https://hilaria-nonpelagic-devorah.ngrok-free.dev2"
-  retry_on_failure = true
-  secret = nonsensitive(var.webhook_secret)
-}
-
-import {
-  to = spacelift_named_webhook.test1
-  id = "test1"
-}

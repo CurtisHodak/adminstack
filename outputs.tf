@@ -9,3 +9,11 @@ data "spacelift_ips" "ips" {}
 output "ips" {
   value = data.spacelift_ips.ips
 }
+
+data "spacelift_space_by_path" "spacepath" {
+  space_path = "root/klav1/klav2"
+}
+
+output "space_path" {
+  value = data.spacelift_space_by_path.spacepath.value
+}

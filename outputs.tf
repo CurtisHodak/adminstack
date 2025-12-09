@@ -11,10 +11,10 @@ output "ips" {
 }
 
 data "spacelift_space_by_path" "spacepath" {
-  space_path = "root/klav1/klav2"
+  space_path = "root/klav1/klav2/klav3"
 }
 
 output "space_id" {
   value       = data.spacelift_space_by_path.spacepath.id
-  description = "The internal Spacelift space ID for root/klav1/klav2"
+  description = "The internal Spacelift space ID for root/klav1/klav2/klav3"
 }

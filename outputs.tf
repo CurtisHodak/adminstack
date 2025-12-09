@@ -14,6 +14,7 @@ data "spacelift_space_by_path" "spacepath" {
   space_path = "root/klav1/klav2"
 }
 
-output "space_path" {
-  value = data.spacelift_space_by_path.spacepath.value
+output "space_id" {
+  value       = data.spacelift_space_by_path.spacepath.id
+  description = "The internal Spacelift space ID for root/klav1/klav2"
 }

@@ -11,7 +11,7 @@ output "ips" {
 }
 
 data "spacelift_space_by_path" "spacepath" {
-  space_path = "root/TestSpacebyPath/bypath1/two"
+  space_path = "root/TestSpacebyPath/bypath1/one"
 }
 
 output "space_id" {

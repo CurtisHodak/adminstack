@@ -27,6 +27,3 @@ resource "spacelift_space" "problemspace" {
 
 #
 
-resource "spacelift_api_key" "test_api_key" {
-    name        = "test_api_key"
-}

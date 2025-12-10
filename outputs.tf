@@ -10,12 +10,12 @@ output "ips" {
   value = data.spacelift_ips.ips
 }
 
-# data "spacelift_space_by_path" "spacepath" {
-#   space_path = "root/klav1/klav2/klav3"
-# }
+data "spacelift_space_by_path" "spacepath" {
+  space_path = "root/TestSpacebyPath/bypath1/one"
+}
 
 output "space_id" {
-  value       = var.testing
+  value       = data.spacelift_space_by_path.spacepath.id
   description = ""
 }
 

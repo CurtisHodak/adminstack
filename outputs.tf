@@ -10,12 +10,12 @@ output "ips" {
   value = data.spacelift_ips.ips
 }
 
-data "spacelift_space_by_path" "spacepath" {
-  space_path = "root/TestSpacebyPath/bypath1/three"
+data "spacelift_space_by_relative_path" "spacepath" {
+  space_path = "TestSpacebyPath/bypath1/three"
 }
 
 output "space_id" {
-  value       = data.spacelift_space_by_path.spacepath.id
+  value       = data.spacelift_space_by_relative_path.spacepath.id
   description = ""
 }
 

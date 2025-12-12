@@ -33,6 +33,7 @@ ephemeral "random_password" "example" {
 }
 
 output "password_preview" {
-  value     = substr(ephemeral.random_password.example.result, 0, 4)
-  sensitive = true
+  value            = substr(ephemeral.random_password.example.result, 0, 4)
+  ephemeral        = true
+  sensitive        = true
 }

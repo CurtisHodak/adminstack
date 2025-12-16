@@ -27,13 +27,13 @@
 
 #
 
-ephemeral "random_password" "example" {
-  length  = 24
-  special = true
-}
+# ephemeral "random_password" "example" {
+#   length  = 24
+#   special = true
+# }
 
-output "password_preview" {
-  value            = substr(ephemeral.random_password.example.result, 0, 4)
-  ephemeral        = true
-  sensitive        = true
-}
+# output "password_preview" {
+#   value            = substr(ephemeral.random_password.example.result, 0, 4)
+#   ephemeral        = true
+#   sensitive        = true
+# }

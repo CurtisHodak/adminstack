@@ -2,6 +2,7 @@ version: "2"
 
 stack_defaults:
   before_init:
-    -  mkdir test
-    -  cd test
-    -  ls -la
+    - |  
+        mkdir test
+        cd test
+        ls -la

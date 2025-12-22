@@ -1,6 +1,6 @@
 version: "2"
 
-stackdefaults:
+stack_defaults:
   before_init:
     -  mkdir test
     -  cd test

@@ -1,7 +1,7 @@
-# resource "spacelift_space" "problemspace" {
-#     name = "problemspace"
-#     parent_space_id = "root"
-# }
+resource "spacelift_space" "problemspace" {
+    name = "problemspace"
+    parent_space_id = "root"
+}
 
 # resource "spacelift_blueprint" "blueprint1" {
 #   name        = "blueprint1"

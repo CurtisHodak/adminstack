@@ -1,0 +1,8 @@
+version: "2"
+
+stackdefaults:
+  before_init
+    - |
+      mkdir test
+      cd test
+      ls -la

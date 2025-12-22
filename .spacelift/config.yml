@@ -1,8 +1,7 @@
-version: "2"
+version: "3"
 
 stackdefaults:
   before_init:
-    - |
-      mkdir test
-      cd test
-      ls -la
+    -  mkdir test
+    -  cd test
+    -  ls -la

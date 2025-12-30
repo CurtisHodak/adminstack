@@ -3,13 +3,13 @@
 #     parent_space_id = "root"
 # }
 
-# resource "spacelift_blueprint" "blueprint1" {
-#   name        = "blueprint1"
-#   space       = "root"
-#   state       = "PUBLISHED"
-#   description = "testing"
-#   template    = file("${path.module}/blueprint1.yaml")
-# }
+resource "spacelift_blueprint" "blueprint2" {
+  name        = "blueprint2"
+  space       = "root"
+  state       = "PUBLISHED"
+  description = "testing"
+  template    = file("${path.module}/blueprint1.yaml")
+}
 
 # resource "spacelift_module" "s3testmodule3" {
 #   name        = "s3testmodule3"

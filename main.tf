@@ -3,8 +3,8 @@
 #     parent_space_id = "root"
 # }
 
-resource "spacelift_blueprint" "blueprint1" {
-  name        = "blueprint1"
+resource "spacelift_blueprint" "blueprint2" {
+  name        = "blueprint2"
   space       = "root"
   state       = "PUBLISHED"
   description = "testing"
